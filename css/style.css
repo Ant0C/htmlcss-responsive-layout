@@ -49,6 +49,10 @@ a{
     align-items: center;
 }
 
+.row-card-20{
+    justify-content: space-around;
+}
+
 /* Col */
 
 .col-30{
@@ -62,11 +66,17 @@ a{
 /* Buttons */
 
 .button{
-
+    padding: 8px 15px;
+    border-radius: 20px;
+    background-color: var(--blue);
+    color: white;
 }
 
 .button--white{
-
+    padding: 0px 5px;
+    border-radius: 20px;
+    background-color: white;
+    color: black;
 }
 
 /*** HEADER ***/
@@ -89,7 +99,7 @@ a{
     display: none;
 }
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 891px) {
     .hamburger {
         display: block;
     }
@@ -99,30 +109,81 @@ a{
     }
 }
 
-/*** HERO ***/
+/*** CARD ***/
+
+.row-card-20:first-child{
+    flex-wrap: nowrap;
+}
 
 .card{
     background-color: var(--lightblue);
-    min-height: 200px;
     padding: 20px;
-    border: 2px solid black;
     border-radius: 20px;
 }
 
-/* Media query Hero */
+.col-card-20{
+    max-width: 355px;
+}
+
+.col-card-20 img{
+    width: 200px;
+}
+
+.col-card-20 p{
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+
+.col-card-30 p{
+    margin-top: 25px;
+}
+
+.row-card-30{
+    flex-direction: column;
+}
+
+.container-card-30{
+    text-align: center;
+}
+
+.col-card-30 .icon{
+    font-size: 60px;
+    margin-bottom: 25px;
+}
+
+.main-card h3,.icon{
+    color: var(--blue);
+}
+
+/* Media query Card */
 
 @media screen and (max-width: 575px){
-    .main-hero [class^="col-"]{
+    .main-card [class^="col-"]{
         flex-basis: calc(100%);
     }
+
+    .row-card-20{
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 891px){
+    .row-card-20{
+        flex-direction: column;
+    }
+
 }
 
 /* Space card */
 
-.col-20,.col-30{
-    margin-top: 20px;
-}
-
-.main-hero .row{
+.main-card{
     padding: 20px 0px;
 }
+
+/*** HERO ***/
+
+.main-hero{
+    background-color: var(--purple);
+    min-height: 200px;
+}
+
