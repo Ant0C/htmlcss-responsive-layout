@@ -111,6 +111,10 @@ a{
 
 /*** CARD ***/
 
+.main-card{
+    padding: 20px 0px;
+}
+
 .row-card-20:first-child{
     flex-wrap: nowrap;
 }
@@ -174,16 +178,94 @@ a{
 
 }
 
-/* Space card */
+/*** HERO ***/
 
-.main-card{
-    padding: 20px 0px;
+.row-hero{
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: baseline;
+    color: white;
 }
 
-/*** HERO ***/
+.main-hero .container{
+    padding: 50px;
+}
 
 .main-hero{
     background-color: var(--purple);
     min-height: 200px;
 }
 
+.planning1{
+    width: 300px;
+}
+
+.planning2{
+    width: 200px;
+}
+
+.col-hero{
+    max-width: 400px;
+}
+
+.row-hero-right{
+    text-align: center;
+    background-color: white;
+    color: black;
+    border-radius: 25px;
+}
+
+.row-hero-left h3{
+    margin-top: 5rem;
+    margin-bottom: 1.5rem;
+}
+
+.row-hero-right h3{
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.arrow{
+    font-size: 12px;
+    padding: 12px;
+    background-color: var(--purple);
+    border-radius: 50%;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+/* Media query hero */
+
+@media screen and (max-width: 891px){
+    .row-hero{
+        flex-direction: column;
+    }
+    .row-hero img{
+        width: 500px;
+    }
+    .row-hero-left h3{
+        font-size: 50px;
+    }
+
+    .col-hero{
+        max-width: 600px;
+    }
+}
+
+@media screen and (max-width: 575px){
+    .row-hero{
+        flex-direction: column;
+    }
+
+    .row-hero img{
+        width: 300px;
+    }
+
+    .row-hero-left h3{
+        font-size: 30px;
+    }
+
+    .col-hero{
+        max-width: 400px;
+    }
+}
