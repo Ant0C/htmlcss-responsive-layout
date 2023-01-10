@@ -1,0 +1,128 @@
+
+/* Regole generali */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+img{
+    width: 100%;
+}
+
+ul,ol,li{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+    color: currentColor;
+}
+
+:root{
+    --blue: #0084FD;
+    --lightblue: #b5ddff;
+    --purple: #9792E4;
+    --dark: #333333;
+    --yellow: #FDC15F;
+}
+
+/* Container e row generali */
+
+.container{
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.space-nav{
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Col */
+
+.col-30{
+    flex-basis: calc(100%/3);
+}
+
+.col-20{
+    flex-basis: calc(100%*(2/3));
+}
+
+/* Buttons */
+
+.button{
+
+}
+
+.button--white{
+
+}
+
+/*** HEADER ***/
+
+.main-header{
+    background-color: var(--blue);
+    padding: 19px 0px;
+    color: white;
+}
+
+.nav-item a{
+    line-height: 38px;
+    font-size: 14px;
+    padding: 0 16px;
+}
+
+/* Media query header */
+
+.hamburger{
+    display: none;
+}
+
+@media screen and (max-width: 991px) {
+    .hamburger {
+        display: block;
+    }
+
+    .header-nav{
+        display: none;
+    }
+}
+
+/*** HERO ***/
+
+.card{
+    background-color: var(--lightblue);
+    min-height: 200px;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 20px;
+}
+
+/* Media query Hero */
+
+@media screen and (max-width: 575px){
+    .main-hero [class^="col-"]{
+        flex-basis: calc(100%);
+    }
+}
+
+/* Space card */
+
+.col-20,.col-30{
+    margin-top: 20px;
+}
+
+.main-hero .row{
+    padding: 20px 0px;
+}
