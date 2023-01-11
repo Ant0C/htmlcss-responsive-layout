@@ -35,8 +35,9 @@ a{
 /* Container e row generali */
 
 .container{
-    max-width: 1140px;
+    max-width: 1180px;
     margin: 0 auto;
+    padding: 0 20px;
 }
 
 .row{
@@ -112,7 +113,16 @@ a{
 /*** CARD ***/
 
 .main-card{
-    padding: 20px 0px;
+    padding: 50px 0px 100px;
+}
+
+.row.gutter{
+    row-gap: 25px;
+    margin: 0 -12px;
+}
+
+.row.gutter > [class^="col"]{
+    padding: 0 12px;
 }
 
 .row-card-20:first-child{
@@ -121,7 +131,7 @@ a{
 
 .card{
     background-color: var(--lightblue);
-    padding: 20px;
+    padding: 32px 24px;
     border-radius: 20px;
 }
 
@@ -140,19 +150,17 @@ a{
 
 .col-card-30 p{
     margin-top: 25px;
+    line-height: 1.7em;
 }
 
 .row-card-30{
     flex-direction: column;
-}
-
-.container-card-30{
+    gap: 20px;
     text-align: center;
 }
 
 .col-card-30 .icon{
-    font-size: 60px;
-    margin-bottom: 25px;
+    font-size: 4rem;
 }
 
 .main-card h3,.icon{
@@ -191,9 +199,12 @@ a{
     padding: 50px;
 }
 
+.row-hero-right{
+    padding: 25px 25px;
+}
+
 .main-hero{
     background-color: var(--purple);
-    min-height: 200px;
 }
 
 .planning1{
@@ -205,7 +216,7 @@ a{
 }
 
 .col-hero{
-    max-width: 400px;
+    flex-basis: 100%;
 }
 
 .row-hero-right{
@@ -231,7 +242,6 @@ a{
     background-color: var(--purple);
     border-radius: 50%;
     margin-top: 3rem;
-    margin-bottom: 3rem;
 }
 
 /* Media query hero */
@@ -248,7 +258,7 @@ a{
     }
 
     .col-hero{
-        max-width: 600px;
+        flex-basis: 100%;
     }
 }
 
@@ -266,6 +276,16 @@ a{
     }
 
     .col-hero{
-        max-width: 400px;
+        flex-basis: 100%;
     }
+}
+
+/*** TESTIMONIALS ***/
+
+.text-testimonials:first-child{
+    text-align: center;
+}
+
+.row-testimonials img{
+    width: 200px;
 }
